@@ -11,7 +11,11 @@ import {
 } from "@chakra-ui/react";
 import { FaPlus, FaClinicMedical } from "react-icons/fa";
 
-export default function withAction() {
+export interface HeaderProps {
+  onSchedule: () => void;
+}
+
+export default function withAction({onSchedule}: HeaderProps) {
   return (
     <>
       <Box bg={"gray.200"} px={4} w={"100%"}>
@@ -25,6 +29,7 @@ export default function withAction() {
               size={"sm"}
               mr={4}
               leftIcon={<FaPlus />}
+              onClick={onSchedule}
             >
               Umów wizytę
             </Button>
