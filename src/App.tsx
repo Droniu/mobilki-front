@@ -1,6 +1,7 @@
 import "./App.css";
 import LoginCard from "./LoginCard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import RegisterCard from "./RegisterCard";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/login" element={<LoginCard />} />
-          <Route path="/register"></Route>
+          <Route path="/register" element={<RegisterCard />} />
           <Route path="/"></Route>
         </Routes>
       </Router>
