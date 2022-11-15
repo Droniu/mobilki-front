@@ -1,7 +1,7 @@
-import "./App.css";
-import LoginCard from "./LoginCard";
+import LoginCard from "./views/LoginCard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import RegisterCard from "./RegisterCard";
+import RegisterCard from "./views/RegisterCard";
+import VisitList from "./views/VisitList";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginCard />} />
           <Route path="/register" element={<RegisterCard />} />
-          <Route path="/"></Route>
+          <Route path="/" element={<VisitList />} />
         </Routes>
       </Router>
     </div>
